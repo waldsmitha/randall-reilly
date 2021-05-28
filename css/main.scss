@@ -1,0 +1,36 @@
+@mixin flex($align, $direction, $justify) {
+  align-items: $align;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+}
+
+$header1: calc(3rem + 1vw);
+$header2: calc(2.5rem + 1vw);
+$text: calc(2rem + 1vw);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lexend Tera", sans-serif;
+  background: #333;
+  color: #fff;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+p {
+  font-size: 2rem;
+}
