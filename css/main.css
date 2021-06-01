@@ -70,6 +70,47 @@ header #logo-desktop {
   display: none;
 }
 
+main {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 600px) {
+  header,
+  main {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+  header .bg,
+  main .bg {
+    max-width: 60rem;
+  }
+  header .info-container .intro-section,
+  main .info-container .intro-section {
+    padding: 0;
+  }
+  header,
+  footer {
+    padding: 2rem 0;
+  }
+  header h1,
+  footer h1 {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+}
+
 @media screen and (min-width: 768px) {
   header #logo-desktop {
     display: block;
@@ -79,23 +120,32 @@ header #logo-desktop {
   }
 }
 
-.intro-section {
-  min-height: 60vh;
-  padding: 0 2rem;
-  background: #ffffff;
-}
-
-.intro-section video {
-  width: 100%;
-  min-height: 30vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin: 4rem 0;
-  cursor: pointer;
-}
-
-.intro-section .title span {
-  color: #82bc00;
+@media screen and (min-width: 1000px) {
+  main {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100vw;
+    max-width: none;
+  }
+  .bg {
+    display: none;
+  }
+  header {
+    width: 100vw;
+    max-width: none;
+    padding: 5rem 5rem;
+  }
 }
 
 .form-section {
@@ -137,35 +187,17 @@ header #logo-desktop {
   background: #c3d600;
 }
 
+.form-section .form-section-header,
+.form-section input,
+.form-section label,
+.form-section select,
+.form-section button {
+  max-width: 60rem;
+}
+
 .form-section form {
   width: 100%;
   padding: 2rem;
-}
-
-.form-section label {
-  width: 100%;
-}
-
-.form-section input,
-.form-section select {
-  width: 100%;
-  padding: 0.5rem;
-  border: none;
-}
-
-.form-section select {
-  padding: 1rem;
-}
-
-.form-section input {
-  font-size: 1.8rem;
-}
-
-.form-section select {
-  border-radius: 0;
-}
-
-.form-section .form-section-header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -181,13 +213,63 @@ header #logo-desktop {
           justify-content: center;
 }
 
+.form-section label {
+  width: 100%;
+}
+
+.form-section input,
+.form-section select {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  margin-bottom: 2rem;
+}
+
+.form-section select {
+  padding: 1rem;
+}
+
+.form-section input {
+  font-size: 1.8rem;
+}
+
+.form-section select {
+  border-radius: 0;
+}
+
+.form-section .form-section-header {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form-section .form-section-header a {
+  text-decoration: none;
+  color: #82bc00;
+}
+
 .form-section .form-section-header h2 {
   color: #82bc00;
   padding: 2rem;
 }
 
 .form-section .form-section-header p {
-  padding-bottom: 2rem;
+  padding: 2rem;
+}
+
+#lto {
+  text-align: center;
+  width: 100%;
 }
 
 .disclaimer {
@@ -195,8 +277,33 @@ header #logo-desktop {
   padding: 0 2rem;
 }
 
+@media screen and (max-width: 1000px) {
+  .form-section {
+    height: 100%;
+  }
+}
+
 .info-container {
   min-height: 60vh;
+}
+
+.info-container .intro-section {
+  min-height: 60vh;
+  padding: 0 2rem;
+  background: #ffffff;
+}
+
+.info-container .intro-section video {
+  width: 100%;
+  min-height: 30vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 4rem 0;
+  cursor: pointer;
+}
+
+.info-container .intro-section .title span {
+  color: #82bc00;
 }
 
 .info-container .info-container-header {
@@ -252,5 +359,17 @@ header #logo-desktop {
   position: fixed;
   top: 0;
   z-index: -1;
+}
+
+@media screen and (min-width: 1000px) {
+  .info-container {
+    margin: 0 5rem;
+  }
+  .info-container .info-container-header {
+    min-height: auto;
+  }
+  .info-container .info-container-header h2 {
+    background: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

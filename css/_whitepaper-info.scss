@@ -1,6 +1,24 @@
 .info-container {
   min-height: 60vh;
 
+  .intro-section {
+    min-height: 60vh;
+    padding: 0 2rem;
+    background: $white;
+    video {
+      width: 100%;
+      min-height: 30vh;
+      object-fit: cover;
+      margin: 4rem 0;
+      cursor: pointer;
+    }
+    .title {
+      span {
+        color: $green;
+      }
+    }
+  }
+
   .info-container-header {
     min-height: 25vh;
     @include flex(center, row, center);
@@ -28,5 +46,16 @@
     position: fixed;
     top: 0;
     z-index: -1;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .info-container {
+    margin: 0 5rem;
+    .info-container-header {
+      min-height: auto;
+      h2 {
+        background: none;
+      }
+    }
   }
 }

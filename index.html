@@ -23,18 +23,17 @@
     </header>
     <main>
       <section class="info-container">
-      <div class="intro-section">
-        <h1 class="title">
-          The latest <span>medical device whitepapers</span> direct to your
-          email
-        </h1>
-        <video
-          src="./img/video.mp4"
-          onclick="this.paused ? this.play() : this.pause();"
-          type="video/mp4"
-        ></video>
-      </div>
-        <div class="bg"></div>
+        <div class="intro-section">
+          <h1 class="title">
+            The latest <span>medical device whitepapers</span> direct to your
+            email
+          </h1>
+          <video
+            src="./img/video.mp4"
+            onclick="this.paused ? this.play() : this.pause();"
+            type="video/mp4"
+          ></video>
+        </div>
         <div class="info-container-header">
           <h2>Machine Learning AI in Medical Devices</h2>
         </div>
@@ -49,11 +48,16 @@
             effective?
           </li>
         </ul>
+        <div class="bg"></div>
       </section>
       <section class="form-section">
         <div class="form-section-header">
-          <h2>Sign up to receive this </br> quarter's whitepaper</h2>
-          <p>*Limited Time Offer*</p>
+          <h2>Sign up to receive this quarter's whitepaper</h2>
+          <p>
+            Or call toll-free at <a href="tel:5555555555">555-555-5555</a> to
+            speak with a representative
+          </p>
+          <p id="lto">*Limited Time Offer*</p>
         </div>
         <form action="/action_page.php" id="form">
           <label for="fname">First Name:</label><br />

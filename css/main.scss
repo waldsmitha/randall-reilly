@@ -28,6 +28,34 @@ header {
   }
 }
 
+main {
+  @include flex(center, column, center);
+}
+
+@media screen and (min-width: 600px) {
+  header,
+  main {
+    max-width: 60rem;
+    margin: 0 auto;
+    .bg {
+      max-width: 60rem;
+    }
+    .info-container {
+      .intro-section {
+        padding: 0;
+      }
+    }
+  }
+  header,
+  footer {
+    padding: 2rem 0;
+    h1 {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+  }
+}
+
 @media screen and (min-width: 768px) {
   header {
     #logo-desktop {
@@ -39,6 +67,23 @@ header {
   }
 }
 
-@import "./intro";
+@media screen and (min-width: 1000px) {
+  main {
+    @include flex(flex-start, row, space-between);
+    // background: blue;
+    width: 100vw;
+    max-width: none;
+  }
+  .bg {
+    display: none;
+  }
+  header {
+    // background: black;
+    width: 100vw;
+    max-width: none;
+    padding: 5rem 5rem;
+  }
+}
+
 @import "./form";
 @import "./whitepaper-info";

@@ -23,9 +23,17 @@
       background: #c3d600;
     }
   }
+  .form-section-header,
+  input,
+  label,
+  select,
+  button {
+    max-width: 60rem;
+  }
   form {
     width: 100%;
     padding: 2rem;
+    @include flex(center, column, center);
   }
   label {
     // padding: 0 2rem;
@@ -37,6 +45,7 @@
     width: 100%;
     padding: 0.5rem;
     border: none;
+    margin-bottom: 2rem;
   }
 
   select {
@@ -52,19 +61,34 @@
   }
 
   .form-section-header {
-    @include flex(center, column, center);
+    @include flex(flex-start, column, center);
 
+    a {
+      text-decoration: none;
+      color: $green;
+    }
     h2 {
       color: $green;
       padding: 2rem;
     }
     p {
-      padding-bottom: 2rem;
+      padding: 2rem;
     }
   }
+}
+
+#lto {
+  text-align: center;
+  width: 100%;
 }
 
 .disclaimer {
   font-size: 1.2rem;
   padding: 0 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .form-section {
+    height: 100%;
+  }
 }
