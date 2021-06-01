@@ -54,6 +54,7 @@ footer {
 
 footer h1 {
   font-size: 1.6rem;
+  color: #777777;
 }
 
 header {
@@ -63,6 +64,19 @@ header {
 
 header img {
   cursor: pointer;
+}
+
+header #logo-desktop {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  header #logo-desktop {
+    display: block;
+  }
+  header #logo-mobile {
+    display: none;
+  }
 }
 
 .intro-section {
@@ -82,65 +96,6 @@ header img {
 
 .intro-section .title span {
   color: #82bc00;
-}
-
-.info-container {
-  min-height: 60vh;
-}
-
-.info-container .info-container-header {
-  min-height: 25vh;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.info-container .info-container-header h2 {
-  background: rgba(239, 239, 239, 0.9);
-  color: #82bc00;
-  padding: 2rem;
-}
-
-.info-container .whitepaper-info {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 4rem;
-  background: #ffffff;
-}
-
-.info-container .whitepaper-info li {
-  font-size: calc(1.6rem + 1vw);
-  margin: 2rem 0;
-}
-
-.info-container .bg {
-  background-image: url("../img/circuit.png");
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  z-index: -1;
 }
 
 .form-section {
@@ -238,5 +193,64 @@ header img {
 .disclaimer {
   font-size: 1.2rem;
   padding: 0 2rem;
+}
+
+.info-container {
+  min-height: 60vh;
+}
+
+.info-container .info-container-header {
+  min-height: 25vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.info-container .info-container-header h2 {
+  background: rgba(239, 239, 239, 0.9);
+  color: #82bc00;
+  padding: 2rem;
+}
+
+.info-container .whitepaper-info {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 4rem;
+  background: #ffffff;
+}
+
+.info-container .whitepaper-info li {
+  font-size: calc(1.6rem + 1vw);
+  margin: 2rem 0;
+}
+
+.info-container .bg {
+  background-image: url("../img/circuit.png");
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: -1;
 }
 /*# sourceMappingURL=main.css.map */

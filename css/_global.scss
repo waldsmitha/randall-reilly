@@ -1,0 +1,61 @@
+@mixin flex($align, $direction, $justify) {
+  align-items: $align;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+}
+
+$header1: calc(3rem + 1vw);
+$header2: calc(2.5rem + 1vw);
+$body: calc(1.6rem + 1vw);
+
+$green: #82bc00;
+$body-color: #444444;
+$light-gray: #efefef;
+$dark-gray: #222222;
+$white: #ffffff;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: $white;
+  color: #444444;
+  overflow-x: hidden;
+  // cursor: none;
+}
+
+h1,
+h2 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 100;
+}
+
+h1 {
+  font-size: $header1;
+}
+
+h2 {
+  font-size: $header2;
+}
+
+p,
+li,
+label,
+input {
+  font-size: $body;
+  font-weight: 300;
+}
+
+p,
+li {
+  line-height: 130%;
+}

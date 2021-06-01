@@ -1,0 +1,70 @@
+.form-section {
+  @include flex(center, column, center);
+  background: $light-gray;
+  font-size: $body;
+  padding: 5rem 0rem;
+  width: 100%;
+
+  select,
+  button {
+    cursor: pointer;
+  }
+
+  button {
+    width: 100%;
+    background: $green;
+    color: $white;
+    font-size: $body;
+    padding: 2rem;
+    margin: 1rem 0;
+    margin-bottom: 4rem;
+
+    &:hover {
+      background: #c3d600;
+    }
+  }
+  form {
+    width: 100%;
+    padding: 2rem;
+  }
+  label {
+    // padding: 0 2rem;
+    // background: cyan;
+    width: 100%;
+  }
+  input,
+  select {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+  }
+
+  select {
+    padding: 1rem;
+  }
+
+  input {
+    font-size: 1.8rem;
+  }
+
+  select {
+    border-radius: 0;
+  }
+
+  .form-section-header {
+    @include flex(center, column, center);
+
+    h2 {
+      color: $green;
+      padding: 2rem;
+    }
+    p {
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+.disclaimer {
+  font-size: 1.2rem;
+  padding: 0 2rem;
+}

@@ -1,0 +1,32 @@
+.info-container {
+  min-height: 60vh;
+
+  .info-container-header {
+    min-height: 25vh;
+    @include flex(center, row, center);
+    h2 {
+      background: rgba(239, 239, 239, 0.9);
+      color: $green;
+      padding: 2rem;
+    }
+  }
+
+  .whitepaper-info {
+    @include flex(flex-start, column, center);
+    padding: 4rem;
+    background: $white;
+
+    li {
+      font-size: $body;
+      margin: 2rem 0;
+    }
+  }
+  .bg {
+    background-image: url("../img/circuit.png");
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+  }
+}

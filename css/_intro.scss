@@ -1,0 +1,18 @@
+.intro-section {
+  min-height: 60vh;
+  padding: 0 2rem;
+  background: $white;
+
+  video {
+    width: 100%;
+    min-height: 30vh;
+    object-fit: cover;
+    margin: 4rem 0;
+    cursor: pointer;
+  }
+  .title {
+    span {
+      color: $green;
+    }
+  }
+}
