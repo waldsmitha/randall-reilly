@@ -4,14 +4,14 @@
 
   .bg-white {
     background: $white;
-    width: 100vw;
+    width: 100%;
   }
 
   .intro-section {
     padding: 4rem 2rem 0 2rem;
     background: $white;
-    // max-width: 600px;
-    // margin: 0 auto;
+    max-width: 600px;
+    margin: 0 auto;
 
     video {
       width: 100%;
@@ -19,6 +19,7 @@
       object-fit: cover;
       border: 2px solid $dark-gray;
       cursor: pointer;
+      margin: 4rem 0;
     }
 
     .title {
@@ -30,15 +31,16 @@
 
   .info-container-header {
     min-height: 25vh;
-    // max-width: 600px;
-    // margin: 0 auto;
+    max-width: 600px;
+    margin: 0 auto;
     height: 100%;
 
     @include flex(center, row, center);
     h2 {
       background: rgba(239, 239, 239, 0.9);
       color: $green;
-      padding: 2rem 2rem;
+      padding: 2rem;
+      margin: 2rem;
     }
   }
 
@@ -81,7 +83,6 @@
 @media screen and (min-width: 1000px) {
   .info-container {
     max-width: 600px;
-    // margin-right: 10vw;
     .info-container-header {
       min-height: auto;
       h2 {

@@ -5,7 +5,6 @@
   padding: 5rem 0rem;
   width: 100%;
   flex: 1 1 40rem;
-  // margin: 0 auto;
 
   select,
   button {
@@ -38,8 +37,6 @@
     @include flex(center, column, center);
   }
   label {
-    // padding: 0 2rem;
-    // background: cyan;
     width: 100%;
   }
   input,
