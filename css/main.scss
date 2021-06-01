@@ -7,7 +7,13 @@
 
 $header1: calc(3rem + 1vw);
 $header2: calc(2.5rem + 1vw);
-$text: calc(2rem + 1vw);
+$body: calc(1.6rem + 1vw);
+
+$green: #82bc00;
+$body-color: #444444;
+$light-gray: #efefef;
+$dark-gray: #222222;
+$white: #ffffff;
 
 * {
   box-sizing: border-box;
@@ -20,17 +26,183 @@ html {
 }
 
 body {
-  font-family: "Lexend Tera", sans-serif;
-  background: #333;
-  color: #fff;
+  font-family: "Roboto", sans-serif;
+  background: $white;
+  color: #444444;
   overflow-x: hidden;
-  cursor: none;
+  // cursor: none;
+}
+
+h1,
+h2 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 100;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: $header1;
 }
 
-p {
-  font-size: 2rem;
+h2 {
+  font-size: $header2;
+}
+
+p,
+li,
+label,
+input {
+  font-size: $body;
+  font-weight: 300;
+}
+
+p,
+li {
+  line-height: 130%;
+}
+
+//
+
+header,
+footer {
+  padding: 2rem;
+}
+
+footer {
+  background: $dark-gray;
+
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+
+header {
+  min-height: 10vh;
+  background: $white;
+  img {
+    cursor: pointer;
+  }
+}
+
+.intro-section {
+  min-height: 60vh;
+  padding: 0 2rem;
+  background: $white;
+
+  video {
+    width: 100%;
+    min-height: 30vh;
+    object-fit: cover;
+    margin: 4rem 0;
+    cursor: pointer;
+  }
+  .title {
+    span {
+      color: $green;
+    }
+  }
+}
+
+.info-container {
+  min-height: 60vh;
+
+  .info-container-header {
+    min-height: 25vh;
+    @include flex(center, row, center);
+    h2 {
+      background: rgba(239, 239, 239, 0.9);
+      color: $green;
+      padding: 2rem;
+    }
+  }
+
+  .whitepaper-info {
+    @include flex(center, column, center);
+    padding: 4rem;
+    background: $white;
+
+    li {
+      font-size: $body;
+      margin: 2rem 0;
+      // background: gray;
+    }
+  }
+  .bg {
+    background-image: url("../img/circuit.png");
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+  }
+}
+
+.form-section {
+  @include flex(center, column, center);
+  background: $light-gray;
+  font-size: $body;
+  padding: 5rem 0rem;
+  width: 100%;
+
+  select,
+  button {
+    cursor: pointer;
+  }
+
+  button {
+    width: 100%;
+    background: $green;
+    color: $white;
+    font-size: $body;
+    padding: 2rem;
+    margin: 1rem 0;
+    margin-bottom: 4rem;
+
+    &:hover {
+      background: #c3d600;
+    }
+  }
+  form {
+    width: 100%;
+    padding: 2rem;
+  }
+  label {
+    // padding: 0 2rem;
+    // background: cyan;
+    width: 100%;
+  }
+  input,
+  select {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+  }
+
+  select {
+    padding: 1rem;
+  }
+
+  input {
+    font-size: 1.8rem;
+  }
+
+  select {
+    border-radius: 0;
+  }
+
+  .form-section-header {
+    @include flex(center, column, center);
+
+    h2 {
+      color: $green;
+      padding: 2rem;
+    }
+    p {
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+.disclaimer {
+  font-size: 1.2rem;
+  padding: 0 2rem;
 }
