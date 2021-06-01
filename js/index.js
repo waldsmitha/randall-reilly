@@ -1,6 +1,16 @@
-import { gsap } from "gsap";
-import { TextPlugin } from "gsap/TextPlugin";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// const video = document.querySelector("#video");
+// const playIcon = document.querySelector(".play-icon");
 
-gsap.registerPlugin(TextPlugin, ScrollToPlugin, ScrollTrigger);
+// console.log(video.paused);
+
+// const playVideo = () => {
+//   //   video.paused ? console.log(true) : console.log(false);
+//   //   video.paused ? video.play() : video.pause();
+//   if (video.paused) {
+//     video.play();
+//     playIcon.classList.add("hide");
+//   } else {
+//     video.pause();
+//     playIcon.classList.remove("hide");
+//   }
+// };

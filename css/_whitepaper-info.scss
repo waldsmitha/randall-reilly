@@ -1,17 +1,44 @@
 .info-container {
   min-height: 60vh;
+  flex: 1 1 50rem;
+
+  .bg-white {
+    background: $white;
+    width: 100vw;
+  }
 
   .intro-section {
-    min-height: 60vh;
-    padding: 0 2rem;
+    padding: 4rem 2rem 0 2rem;
     background: $white;
+    max-width: 600px;
+    margin: 0 auto;
+
+    .video-container {
+      margin: 4rem 0;
+      position: relative;
+      .play-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.829);
+        pointer-events: none;
+
+        @include flex(center, row, center);
+      }
+    }
     video {
       width: 100%;
       min-height: 30vh;
       object-fit: cover;
-      margin: 4rem 0;
+
       cursor: pointer;
     }
+    .hide {
+      visibility: hidden;
+    }
+
     .title {
       span {
         color: $green;
@@ -20,27 +47,34 @@
   }
 
   .info-container-header {
-    min-height: 25vh;
+    min-height: 20vh;
+    max-width: 600px;
+    margin: 0 auto;
+
     @include flex(center, row, center);
     h2 {
       background: rgba(239, 239, 239, 0.9);
       color: $green;
-      padding: 2rem;
+      padding: 4rem 2rem;
     }
   }
 
   .whitepaper-info {
     @include flex(flex-start, column, center);
-    padding: 4rem;
+    padding: 4rem 2rem;
     background: $white;
+    max-width: 600px;
+    margin: 0 auto;
 
     li {
       font-size: $body;
-      margin: 2rem 0;
+      margin: 2rem;
+      //   list-style: none;
     }
   }
   .bg {
     background-image: url("../img/circuit.png");
+    // background-size: cover;
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -48,9 +82,23 @@
     z-index: -1;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .info-container {
+    .info-container-header {
+      min-height: 0;
+      h2 {
+        background: none;
+        padding: 0 2rem 2rem 2rem;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 1000px) {
   .info-container {
-    margin: 0 5rem;
+    max-width: 600px;
+    // margin-right: 10vw;
     .info-container-header {
       min-height: auto;
       h2 {

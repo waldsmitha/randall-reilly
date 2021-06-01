@@ -23,31 +23,42 @@
     </header>
     <main>
       <section class="info-container">
-        <div class="intro-section">
-          <h1 class="title">
-            The latest <span>medical device whitepapers</span> direct to your
-            email
-          </h1>
-          <video
-            src="./img/video.mp4"
-            onclick="this.paused ? this.play() : this.pause();"
-            type="video/mp4"
-          ></video>
+        <div class="bg-white">
+          <div class="intro-section">
+            <h1 class="title">
+              The latest <span>medical device whitepapers</span> direct to your
+              email
+            </h1>
+            <div class="video-container">
+              <!-- <div class="play-icon">
+                <img src="./img/play-btn.svg" alt="" />
+              </div> -->
+              <video
+                id="video"
+                controls="controls"
+                src="./img/video.mp4"
+                onclick="playVideo()"
+                type="video/mp4"
+              ></video>
+            </div>
+          </div>
         </div>
         <div class="info-container-header">
           <h2>Machine Learning AI in Medical Devices</h2>
         </div>
-        <ul class="whitepaper-info">
-          <li>
-            How is AI different from traditional medical devices & medical
-            software?
-          </li>
-          <li>What are the implications of those differences?</li>
-          <li>
-            What controls are necessary to ensure AI in healthcare is safe &
-            effective?
-          </li>
-        </ul>
+        <div class="bg-white">
+          <ul class="whitepaper-info">
+            <li>
+              How is AI different from traditional medical devices & medical
+              software?
+            </li>
+            <li>What are the implications of those differences?</li>
+            <li>
+              What controls are necessary to ensure AI in healthcare is safe &
+              effective?
+            </li>
+          </ul>
+        </div>
         <div class="bg"></div>
       </section>
       <section class="form-section">

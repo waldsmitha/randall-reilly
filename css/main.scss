@@ -17,9 +17,13 @@ footer {
 }
 
 header {
-  min-height: 10vh;
+  min-height: 8vh;
   background: $white;
-
+  width: 100%;
+  position: sticky;
+  top: 0;
+  @include flex(center, row, flex-start);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   img {
     cursor: pointer;
   }
@@ -29,31 +33,9 @@ header {
 }
 
 main {
-  @include flex(center, column, center);
-}
-
-@media screen and (min-width: 600px) {
-  header,
-  main {
-    max-width: 60rem;
-    margin: 0 auto;
-    .bg {
-      max-width: 60rem;
-    }
-    .info-container {
-      .intro-section {
-        padding: 0;
-      }
-    }
-  }
-  header,
-  footer {
-    padding: 2rem 0;
-    h1 {
-      max-width: 60rem;
-      margin: 0 auto;
-    }
-  }
+  @include flex(flex-start, row, space-around);
+  flex-wrap: wrap;
+  min-height: 90vh;
 }
 
 @media screen and (min-width: 768px) {
@@ -66,22 +48,9 @@ main {
     }
   }
 }
-
-@media screen and (min-width: 1000px) {
-  main {
-    @include flex(flex-start, row, space-between);
-    // background: blue;
-    width: 100vw;
-    max-width: none;
-  }
+@media screen and (min-width: 768px) {
   .bg {
     display: none;
-  }
-  header {
-    // background: black;
-    width: 100vw;
-    max-width: none;
-    padding: 5rem 5rem;
   }
 }
 

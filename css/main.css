@@ -34,7 +34,7 @@ p,
 li,
 label,
 input {
-  font-size: calc(1.6rem + 1vw);
+  font-size: calc(1.6rem + 0.5vw);
   font-weight: 300;
 }
 
@@ -58,8 +58,27 @@ footer h1 {
 }
 
 header {
-  min-height: 10vh;
+  min-height: 8vh;
   background: #ffffff;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 header img {
@@ -71,44 +90,21 @@ header #logo-desktop {
 }
 
 main {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-@media screen and (min-width: 600px) {
-  header,
-  main {
-    max-width: 60rem;
-    margin: 0 auto;
-  }
-  header .bg,
-  main .bg {
-    max-width: 60rem;
-  }
-  header .info-container .intro-section,
-  main .info-container .intro-section {
-    padding: 0;
-  }
-  header,
-  footer {
-    padding: 2rem 0;
-  }
-  header h1,
-  footer h1 {
-    max-width: 60rem;
-    margin: 0 auto;
-  }
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 90vh;
 }
 
 @media screen and (min-width: 768px) {
@@ -120,31 +116,9 @@ main {
   }
 }
 
-@media screen and (min-width: 1000px) {
-  main {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 100vw;
-    max-width: none;
-  }
+@media screen and (min-width: 768px) {
   .bg {
     display: none;
-  }
-  header {
-    width: 100vw;
-    max-width: none;
-    padding: 5rem 5rem;
   }
 }
 
@@ -163,9 +137,13 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   background: #efefef;
-  font-size: calc(1.6rem + 1vw);
+  font-size: calc(1.6rem + 0.5vw);
   padding: 5rem 0rem;
   width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  margin: 0 auto;
 }
 
 .form-section select,
@@ -177,7 +155,7 @@ main {
   width: 100%;
   background: #82bc00;
   color: #ffffff;
-  font-size: calc(1.6rem + 1vw);
+  font-size: calc(1.6rem + 0.5vw);
   padding: 2rem;
   margin: 1rem 0;
   margin-bottom: 4rem;
@@ -230,11 +208,12 @@ main {
 }
 
 .form-section input {
-  font-size: 1.8rem;
+  font-size: calc(1.6rem + 0.5vw);
 }
 
 .form-section select {
   border-radius: 0;
+  font-size: calc(1.6rem + 0.5vw);
 }
 
 .form-section .form-section-header {
@@ -277,20 +256,59 @@ main {
   padding: 0 2rem;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 900px) {
   .form-section {
-    height: 100%;
+    max-width: 600px;
+    padding: 0;
+    padding-bottom: 5rem;
   }
 }
 
 .info-container {
   min-height: 60vh;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50rem;
+          flex: 1 1 50rem;
+}
+
+.info-container .bg-white {
+  background: #ffffff;
+  width: 100vw;
 }
 
 .info-container .intro-section {
-  min-height: 60vh;
-  padding: 0 2rem;
+  padding: 4rem 2rem 0 2rem;
   background: #ffffff;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.info-container .intro-section .video-container {
+  margin: 4rem 0;
+  position: relative;
+}
+
+.info-container .intro-section .video-container .play-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.829);
+  pointer-events: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .info-container .intro-section video {
@@ -298,8 +316,11 @@ main {
   min-height: 30vh;
   -o-object-fit: cover;
      object-fit: cover;
-  margin: 4rem 0;
   cursor: pointer;
+}
+
+.info-container .intro-section .hide {
+  visibility: hidden;
 }
 
 .info-container .intro-section .title span {
@@ -307,7 +328,9 @@ main {
 }
 
 .info-container .info-container-header {
-  min-height: 25vh;
+  min-height: 20vh;
+  max-width: 600px;
+  margin: 0 auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -326,7 +349,7 @@ main {
 .info-container .info-container-header h2 {
   background: rgba(239, 239, 239, 0.9);
   color: #82bc00;
-  padding: 2rem;
+  padding: 4rem 2rem;
 }
 
 .info-container .whitepaper-info {
@@ -343,13 +366,15 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 4rem;
+  padding: 4rem 2rem;
   background: #ffffff;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .info-container .whitepaper-info li {
-  font-size: calc(1.6rem + 1vw);
-  margin: 2rem 0;
+  font-size: calc(1.6rem + 0.5vw);
+  margin: 2rem;
 }
 
 .info-container .bg {
@@ -361,9 +386,19 @@ main {
   z-index: -1;
 }
 
+@media screen and (min-width: 768px) {
+  .info-container .info-container-header {
+    min-height: 0;
+  }
+  .info-container .info-container-header h2 {
+    background: none;
+    padding: 0 2rem 2rem 2rem;
+  }
+}
+
 @media screen and (min-width: 1000px) {
   .info-container {
-    margin: 0 5rem;
+    max-width: 600px;
   }
   .info-container .info-container-header {
     min-height: auto;

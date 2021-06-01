@@ -4,6 +4,8 @@
   font-size: $body;
   padding: 5rem 0rem;
   width: 100%;
+  flex: 1 1 40rem;
+  margin: 0 auto;
 
   select,
   button {
@@ -53,11 +55,12 @@
   }
 
   input {
-    font-size: 1.8rem;
+    font-size: $body;
   }
 
   select {
     border-radius: 0;
+    font-size: $body;
   }
 
   .form-section-header {
@@ -87,8 +90,10 @@
   padding: 0 2rem;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 900px) {
   .form-section {
-    height: 100%;
+    max-width: 600px;
+    padding: 0;
+    padding-bottom: 5rem;
   }
 }
