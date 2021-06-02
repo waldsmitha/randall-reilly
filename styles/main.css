@@ -151,12 +151,10 @@ main {
 }
 
 .form-section button {
-  width: 100%;
   background: #82bc00;
   color: #ffffff;
   font-size: calc(1.6rem + 0.5vw);
-  padding: 2rem;
-  margin: 1rem 0;
+  padding: 2rem 4rem;
   margin-bottom: 4rem;
 }
 
@@ -192,6 +190,11 @@ main {
 
 .form-section label {
   width: 100%;
+}
+
+.form-section label::after {
+  content: " *";
+  color: red;
 }
 
 .form-section input,
@@ -276,7 +279,7 @@ main {
 }
 
 .container .intro-section {
-  padding: 4rem 2rem 0 2rem;
+  padding: 2rem 2rem 0 2rem;
   background: #ffffff;
   max-width: 600px;
   margin: 0 auto;
@@ -348,6 +351,14 @@ main {
   margin: 2rem;
 }
 
+.container .whitepaper-summary li:first-child {
+  margin-top: 0rem;
+}
+
+.container .whitepaper-summary li:last-child {
+  margin-bottom: 0rem;
+}
+
 .container .background {
   background-image: url("../media/circuit.png");
   width: 100vw;
@@ -364,6 +375,7 @@ main {
   .container .whitepaper-header h2 {
     background: none;
     padding: 0 2rem 2rem 2rem;
+    margin: 0;
   }
   .container .background {
     display: none;

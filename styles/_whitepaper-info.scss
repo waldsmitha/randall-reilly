@@ -8,7 +8,7 @@
   }
 
   .intro-section {
-    padding: 4rem 2rem 0 2rem;
+    padding: 2rem 2rem 0 2rem;
     background: $white;
     max-width: 600px;
     margin: 0 auto;
@@ -54,6 +54,13 @@
     li {
       font-size: $body;
       margin: 2rem;
+
+      &:first-child {
+        margin-top: 0rem;
+      }
+      &:last-child {
+        margin-bottom: 0rem;
+      }
     }
   }
   .background {
@@ -74,6 +81,7 @@
       h2 {
         background: none;
         padding: 0 2rem 2rem 2rem;
+        margin: 0;
       }
     }
     .background {
