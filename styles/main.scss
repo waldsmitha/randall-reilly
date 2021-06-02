@@ -1,7 +1,7 @@
+//Global Styles & Variables
 @import "./global";
 
-//
-
+// Footer, Header, & Main
 header,
 footer {
   padding: 2rem;
@@ -9,7 +9,6 @@ footer {
 
 footer {
   background: $dark-gray;
-
   h1 {
     font-size: 1.6rem;
     color: #777777;
@@ -38,6 +37,7 @@ main {
   min-height: 90vh;
 }
 
+//Media Queries
 @media screen and (min-width: 768px) {
   header {
     #logo-desktop {
@@ -48,11 +48,7 @@ main {
     }
   }
 }
-@media screen and (min-width: 768px) {
-  .bg {
-    display: none;
-  }
-}
 
+//Other Style Sheets
 @import "./form";
 @import "./whitepaper-info";

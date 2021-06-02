@@ -10,7 +10,6 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&family=Roboto:wght@100;300;400&display=swap"
       rel="stylesheet"
     />
-
     <title>Randall-Reilly Whitepaper</title>
   </head>
   <body>
@@ -23,15 +22,14 @@
       /></a>
     </header>
     <main>
-      <section class="info-container">
+      <section class="container">
         <div class="bg-white">
           <div class="intro-section">
-            <h1 class="title">
+            <h1>
               The latest <span>medical device whitepapers</span> direct to your
               email
             </h1>
             <video
-              id="video"
               preload="metadata"
               controls="controls"
               src="./media/video.mp4"
@@ -39,11 +37,11 @@
             ></video>
           </div>
         </div>
-        <div class="info-container-header">
+        <div class="whitepaper-header">
           <h2>Machine Learning AI in Medical Devices</h2>
         </div>
         <div class="bg-white">
-          <ul class="whitepaper-info">
+          <ul class="whitepaper-summary">
             <li>
               How is AI different from traditional medical devices & medical
               software?
@@ -55,7 +53,7 @@
             </li>
           </ul>
         </div>
-        <div class="bg"></div>
+        <div class="background"></div>
       </section>
       <section class="form-section">
         <div class="form-section-header">
@@ -67,17 +65,17 @@
           <p id="lto">*Limited Time Offer*</p>
         </div>
         <form action="/action_page.php" id="form">
-          <label for="fname">First Name:</label><br />
-          <input type="text" id="fname" name="fname" /><br /><br />
+          <label for="fname">First Name:</label>
+          <input type="text" id="fname" name="fname" />
           <label for="lname">Last Name:</label><br />
-          <input type="text" id="lname" name="lname" /><br /><br />
+          <input type="text" id="lname" name="lname" />
           <label for="email">Work Email:</label><br />
-          <input type="email" id="email" name="email" /><br /><br />
+          <input type="email" id="email" name="email" />
           <label for="cname">Company Name:</label><br />
-          <input type="text" id="cname" name="cname" /><br /><br />
+          <input type="text" id="cname" name="cname" />
           <label for="job">Job Function:</label><br />
-          <input type="text" id="job" name="job" /><br /><br />
-          <label for="csize">Company Size:</label><br />
+          <input type="text" id="job" name="job" />
+          <label for="csize">Company Size:</label>
           <select type="text" id="csize" name="csize">
             <option value="" disabled selected>- please select -</option>
             <option value="1-5">1-5</option>
@@ -90,7 +88,7 @@
           </select>
         </form>
         <button type="submit" form="form" value="Submit">Enroll Now</button>
-        <p class="disclaimer">
+        <p id="disclaimer">
           All information is confidential and will not be shared with third
           parties
         </p>
@@ -99,7 +97,6 @@
     <footer>
       <h1>Copyright ©2021 Randall-Reilly</h1>
     </footer>
-
     <script src="./js/index.js"></script>
   </body>
 </html>

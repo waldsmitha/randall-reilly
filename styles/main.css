@@ -122,12 +122,6 @@ main {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .bg {
-    display: none;
-  }
-}
-
 .form-section {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -256,7 +250,7 @@ main {
   width: 100%;
 }
 
-.disclaimer {
+#disclaimer {
   font-size: 1.2rem;
   padding: 0 2rem;
 }
@@ -269,26 +263,26 @@ main {
   }
 }
 
-.info-container {
+.container {
   min-height: 60vh;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50rem;
           flex: 1 1 50rem;
 }
 
-.info-container .bg-white {
+.container .bg-white {
   background: #ffffff;
   width: 100%;
 }
 
-.info-container .intro-section {
+.container .intro-section {
   padding: 4rem 2rem 0 2rem;
   background: #ffffff;
   max-width: 600px;
   margin: 0 auto;
 }
 
-.info-container .intro-section video {
+.container .intro-section video {
   width: 100%;
   min-height: 30vh;
   -o-object-fit: cover;
@@ -298,11 +292,11 @@ main {
   margin: 4rem 0;
 }
 
-.info-container .intro-section .title span {
+.container .intro-section h1 span {
   color: #82bc00;
 }
 
-.info-container .info-container-header {
+.container .whitepaper-header {
   min-height: 25vh;
   max-width: 600px;
   margin: 0 auto;
@@ -322,14 +316,14 @@ main {
           justify-content: center;
 }
 
-.info-container .info-container-header h2 {
+.container .whitepaper-header h2 {
   background: rgba(239, 239, 239, 0.9);
   color: #82bc00;
   padding: 2rem;
   margin: 2rem;
 }
 
-.info-container .whitepaper-info {
+.container .whitepaper-summary {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -349,13 +343,13 @@ main {
   margin: 0 auto;
 }
 
-.info-container .whitepaper-info li {
+.container .whitepaper-summary li {
   font-size: calc(1.6rem + 0.5vw);
   margin: 2rem;
 }
 
-.info-container .bg {
-  background-image: url("../img/circuit.png");
+.container .background {
+  background-image: url("../media/circuit.png");
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -364,23 +358,26 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-  .info-container .info-container-header {
+  .container .whitepaper-header {
     min-height: 0;
   }
-  .info-container .info-container-header h2 {
+  .container .whitepaper-header h2 {
     background: none;
     padding: 0 2rem 2rem 2rem;
+  }
+  .container .background {
+    display: none;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .info-container {
+  .container {
     max-width: 600px;
   }
-  .info-container .info-container-header {
+  .container .whitepaper-header {
     min-height: auto;
   }
-  .info-container .info-container-header h2 {
+  .container .whitepaper-header h2 {
     background: none;
   }
 }

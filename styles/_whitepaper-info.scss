@@ -1,4 +1,4 @@
-.info-container {
+.container {
   min-height: 60vh;
   flex: 1 1 50rem;
 
@@ -22,14 +22,14 @@
       margin: 4rem 0;
     }
 
-    .title {
+    h1 {
       span {
         color: $green;
       }
     }
   }
 
-  .info-container-header {
+  .whitepaper-header {
     min-height: 25vh;
     max-width: 600px;
     margin: 0 auto;
@@ -44,7 +44,7 @@
     }
   }
 
-  .whitepaper-info {
+  .whitepaper-summary {
     @include flex(flex-start, column, center);
     padding: 4rem 2rem;
     background: $white;
@@ -54,12 +54,10 @@
     li {
       font-size: $body;
       margin: 2rem;
-      //   list-style: none;
     }
   }
-  .bg {
-    background-image: url("../img/circuit.png");
-    // background-size: cover;
+  .background {
+    background-image: url("../media/circuit.png");
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -68,22 +66,26 @@
   }
 }
 
+//Media Queries
 @media screen and (min-width: 768px) {
-  .info-container {
-    .info-container-header {
+  .container {
+    .whitepaper-header {
       min-height: 0;
       h2 {
         background: none;
         padding: 0 2rem 2rem 2rem;
       }
     }
+    .background {
+      display: none;
+    }
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .info-container {
+  .container {
     max-width: 600px;
-    .info-container-header {
+    .whitepaper-header {
       min-height: auto;
       h2 {
         background: none;

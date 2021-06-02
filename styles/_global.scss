@@ -1,3 +1,4 @@
+//Mixins
 @mixin flex($align, $direction, $justify) {
   align-items: $align;
   display: flex;
@@ -5,6 +6,7 @@
   justify-content: $justify;
 }
 
+//Variables
 $header1: calc(3rem + 1vw);
 $header2: calc(2.5rem + 1vw);
 $body: calc(1.6rem + 0.5vw);
@@ -15,6 +17,7 @@ $light-gray: #efefef;
 $dark-gray: #222222;
 $white: #ffffff;
 
+//Global Styling
 * {
   box-sizing: border-box;
   margin: 0;
